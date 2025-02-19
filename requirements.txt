@@ -1,0 +1,27 @@
+# Data processing
+pandas
+numpy
+requests
+
+# Configuration management
+PyYAML
+
+# Machine learning
+scikit-learn
+# Optionally add:
+# tensorflow
+# torch
+
+# Discord bot
+discord.py
+
+# Task scheduling
+APScheduler
+
+# Logging
+loguru
+
+# Development tools (optional)
+pytest
+flake8
+black

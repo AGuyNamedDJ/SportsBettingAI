@@ -1,0 +1,32 @@
+mlb:
+  # API for fetching MLB game schedules and general game information
+  schedule_api:
+    url: "https://api.sportsdata.io/v3/mlb/scores/json/GamesByDate"
+    api_key: "${SPORTSDATAIO_API_KEY}"
+  
+  # API for retrieving team rosters and player statistics
+  roster_api:
+    url: "https://api.sportsdata.io/v3/mlb/scores/json/Players"
+    api_key: "${SPORTSDATAIO_API_KEY}"
+  
+  # API for injury reports and last-minute roster updates
+  injury_api:
+    url: "https://api.sportsdata.io/v3/mlb/scores/json/Injuries"
+    api_key: "${SPORTSDATAIO_API_KEY}"
+
+  # API for fetching betting odds (moneyline, spread, over/under, etc.)
+  odds_api:
+    url: "https://api.the-odds-api.com/v4/sports/baseball_mlb/odds"
+    api_key: "${ODDS_API_KEY}"
+
+  # Timing configuration for data updates
+  update_intervals:
+    pre_game: 3600  # seconds before game start to refresh data
+    live: 60        # seconds interval for live data polling
+
+# Global logging configuration (optional)
+logging:
+  level: "INFO"
+  log_file: "logs/sportsbettingai.log"
+  max_size: "10MB"
+  backup_count: 5
