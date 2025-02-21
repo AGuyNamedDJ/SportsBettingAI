@@ -35,7 +35,8 @@ def fetch_live_games():
     if response.status_code == 200:
         live_data = response.json()
 
-        # Debugging: Save a copy locally
+        # Save a copy locally for debugging
+        os.makedirs("data/live", exist_ok=True)
         with open("data/live/live_scores.json", "w") as f:
             json.dump(live_data, f, indent=2)
 
